@@ -2,7 +2,7 @@
 
 require '_blackpearl/autoload.php';
 
-use Framework\BlackPearl\Web;
+// use Framework\BlackPearl\Web;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 

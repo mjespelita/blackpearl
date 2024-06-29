@@ -12,7 +12,6 @@ require './_blackpearl/Excel.php';
 require './_blackpearl/Math.php';
 require './_blackpearl/WithUrl.php';
 require './_blackpearl/Redirect.php';
-require './_blackpearl/Web.php';
 
 // Models
 require './models/User.php';
