@@ -14,6 +14,10 @@ $routes->add('homepage', new Route('/', [
     '_controller' => 'App\Controller\HelloController::greet',
 ]));
 
+$routes->add('data', new Route('/data', [
+    '_controller' => 'App\Controller\HelloController::data',
+]));
+
 // Optionally, add more routes as needed
 // $routes->add(...);
 

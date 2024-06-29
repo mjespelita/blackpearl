@@ -5,7 +5,7 @@
 namespace App\Controller;
 
 use Framework\BlackPearl\BlackPearl;
-use Illuminate\Support\Facades\Request;
+use Symfony\Component\HttpFoundation\Request;
 use User;
 
 class HelloController
@@ -16,12 +16,18 @@ class HelloController
         require 'model/User.php';
         require 'BlackPearl.php';
 
-        // return BlackPearl::render('home', []);
-        return User::all();
+        return BlackPearl::render('home', []);
     }
 
-    public function req(Request $request)
+    public function data(Request $request)
     {
-
+        // Example: Retrieve input data from request
+        $name = $request->get('data');
+        
+        // Example: Process data (replace with your application logic)
+        $message = "Hello, $name!";
+        
+        // Example: Return JSON response
+        return header("Location: /");
     }
 }
