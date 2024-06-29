@@ -4,6 +4,7 @@
 
 namespace App\Controller;
 
+use Framework\BlackPearl\BlackPearl;
 use User;
 
 class HelloController
@@ -12,7 +13,8 @@ class HelloController
     {
         require 'boostrap.php';
         require 'model/User.php';
+        require 'BlackPearl.php';
 
-        return "Hello";
+        return BlackPearl::render('home', []);
     }
 }
