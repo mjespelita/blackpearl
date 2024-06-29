@@ -3,7 +3,7 @@
 // index.php
 
 require_once __DIR__ . '/vendor/autoload.php';
-$routes = require_once __DIR__ . '/routes.php'; // Include your routes configuration
+$routes = require_once __DIR__ . '/routes/router.php'; // Include your routes configuration
 
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
