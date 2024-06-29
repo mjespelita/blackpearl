@@ -3,7 +3,19 @@
 require '_blackpearl/autoload.php';
 
 use Framework\BlackPearl\Web;
+use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\RouteCollection;
 
-Web::route('/', 'App\Controller\HomeController::index');
+$routes = new RouteCollection();
 
-return Web::$routes;
+// Define route and controller
+
+$routes->add('home', new Route('/', [
+    '_controller' => 'App\Controller\HomeController::index',
+]));
+
+$routes->add('about', new Route('/about', [
+    '_controller' => 'App\Controller\AboutController::index',
+]));
+
+return $routes;
