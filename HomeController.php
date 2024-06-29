@@ -13,6 +13,6 @@ class HelloController
         require 'boostrap.php';
         require 'model/User.php';
 
-        return dd(User::all());
+        return "Hello";
     }
 }
