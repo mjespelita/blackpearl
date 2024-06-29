@@ -1,0 +1,13 @@
+{
+    "require": {
+        "illuminate/database": "^11.13",
+        "eftec/bladeone": "^4.13",
+        "symfony/routing": "^7.1",
+        "symfony/http-foundation": "^7.1",
+        "symfony/http-kernel": "^7.1",
+        "picqer/php-barcode-generator": "^2.4",
+        "phpmailer/phpmailer": "^6.9",
+        "chillerlan/php-qrcode": "^5.0",
+        "vstelmakh/url-highlight": "^3.0"
+    }
+}
