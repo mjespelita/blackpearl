@@ -2,11 +2,10 @@
 <?php $this->startSection('content'); ?>
  <main>
 
- <h1>Hello World</h1>
+ <a href="/login">Login</a>
+ <a href="/register">Register</a>
 
- <a href="/logout">
- <button>Logout</button>
- </a>
+ Welcome To BlackPearl!
 
  </main>
 <?php $this->stopSection(); ?>

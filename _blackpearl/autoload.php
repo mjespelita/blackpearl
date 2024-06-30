@@ -12,6 +12,7 @@ require './_blackpearl/Excel.php';
 require './_blackpearl/Math.php';
 require './_blackpearl/WithUrl.php';
 require './_blackpearl/Redirect.php';
+require './_blackpearl/Auth.php';
 
 // Models
 require './models/User.php';
@@ -20,3 +21,5 @@ require './models/User.php';
 require './controllers/HomeController.php';
 
 // Additionals
+require './controllers/AuthController.php';
+require './controllers/WelcomeController.php';
