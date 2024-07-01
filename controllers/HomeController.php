@@ -9,7 +9,13 @@ class HomeController
 {
     public function index()
     {
-        Auth::check();
+        /**
+         * Uncomment this code to enable user authentication
+         * and integrate it into your controllers for secure access
+         * control and enhanced application security.
+         */
+        
+        // Auth::check();
 
         return View::render('welcome', []);
     }
