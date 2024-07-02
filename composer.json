@@ -1,5 +1,5 @@
 {
-    "name": "mjespelita/blackpearl",
+    "name": "blackpearl/blackpearl",
     "description": "BlackPearl is a simple and lightweight PHP MVC (Model-View-Controller) framework used for building full-stack web applications in PHP. It utilizes well-known PHP packages and libraries that you may already be familiar with, such as the Blade Templating Engine for the user interface and the Eloquent ORM (Object-Relational Mapping) system for database interaction. BlackPearl also implements a classic routing system and database migration system to enhance the developer experience.",
     "type": "project",
     "license": "MIT",
