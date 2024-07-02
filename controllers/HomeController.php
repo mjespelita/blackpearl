@@ -17,6 +17,6 @@ class HomeController
         
         // Auth::check();
 
-        return View::render('welcome', []);
+        return View::render('home', []);
     }
 }

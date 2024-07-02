@@ -4,9 +4,9 @@
 
  <h1>Hello World</h1>
 
- <a href="/logout">
+ <?php /* <a href="/logout">
  <button>Logout</button>
- </a>
+ </a> */ ?>
 
  </main>
 <?php $this->stopSection(); ?>
