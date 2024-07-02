@@ -1,5 +1,6 @@
 <?php
 
+use Dotenv\Dotenv;
 use Framework\BlackPearl\JSON;
 
 echo "\n";
@@ -149,14 +150,15 @@ file_put_contents('database/migrations/tables.php', "\n\n// $lowerModelName tabl
 
     } elseif($c === 'db:migrate') {
 
-        require '_blackpearl/autoload.php';
+        require 'vendor/autoload.php';
 
-        $env = JSON::read('./env.json');
+        $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
+        $dotenv->load();
 
-        $dbHost = $env['DB_HOST'];
-        $dbUsername = $env['DB_USERNAME'];
-        $dbPassword = $env['DB_PASSWORD'];
-        $dbName = $env['DB_NAME'];
+        $dbHost = $_ENV['DB_HOST'];
+        $dbUsername = $_ENV['DB_USERNAME'];
+        $dbPassword = $_ENV['DB_PASSWORD'];
+        $dbName = $_ENV['DB_NAME'];
 
         $dropDatabase = shell_exec("mysql -h $dbHost -u $dbUsername -p $dbPassword -e \"DROP DATABASE IF EXISTS $dbName;\"");
         $crateDatabase = shell_exec("mysql -h $dbHost -u $dbUsername -p $dbPassword -e \"CREATE DATABASE IF NOT EXISTS $dbName;\"");
