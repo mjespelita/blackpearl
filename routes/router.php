@@ -18,7 +18,7 @@ $Routes->add('home', new Route('/home', [
 ]));
 
 
-// Auth Routes
+// Authentication Routes
 
 $Routes->add('register', new Route('/register', [
     '_controller' => 'App\Controller\AuthController::register',
