@@ -4,8 +4,6 @@
 
  <h1>Hello World</h1>
 
- <?php Framework\BlackPearl\WithUrl::highlight("hello https://facebook.com") ?>
-
  <?php /* <a href="/logout">
  <button>Logout</button>
  </a> */ ?>
