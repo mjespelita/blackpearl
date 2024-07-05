@@ -1,0 +1,14 @@
+<?php $_shouldextend[1]=1; ?>
+<?php $this->startSection('content'); ?>
+ <main>
+
+ <form action="/register-process" method="post">
+ <input type="text" name="name" placeholder="Name"> <br>
+ <input type="email" name="email" placeholder="Email"> <br>
+ <input type="password" name="password" placeholder="Password"> <br>
+ <button type="submit">Register</button>
+ </form>
+
+ </main>
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.app'); } ?>
