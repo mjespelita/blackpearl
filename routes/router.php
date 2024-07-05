@@ -2,42 +2,16 @@
 
 require '_blackpearl/autoload.php';
 
-use Symfony\Component\Routing\Route;
-use Symfony\Component\Routing\RouteCollection;
+use App\Routing\Routes;
 
-$Routes = new RouteCollection();
+return Routes::load(function($route) {
+    $route->add('welcome', '/', 'App\Controller\WelcomeController::index');
+    $route->add('home', '/home', 'App\Controller\HomeController::index');
 
-// Define you route and controller
-
-$Routes->add('welcome', new Route('/', [
-    '_controller' => 'App\Controller\WelcomeController::index',
-]));
-
-$Routes->add('home', new Route('/home', [
-    '_controller' => 'App\Controller\HomeController::index',
-]));
-
-
-// Authentication Routes
-
-$Routes->add('register', new Route('/register', [
-    '_controller' => 'App\Controller\AuthController::register',
-]));
-
-$Routes->add('login', new Route('/login', [
-    '_controller' => 'App\Controller\AuthController::login',
-]));
-
-$Routes->add('logout', new Route('/logout', [
-    '_controller' => 'App\Controller\AuthController::logout',
-]));
-
-$Routes->add('register-process', new Route('/register-process', [
-    '_controller' => 'App\Controller\AuthController::registerProcess',
-]));
-
-$Routes->add('login-process', new Route('/login-process', [
-    '_controller' => 'App\Controller\AuthController::loginProcess',
-]));
-
-return $Routes;
+    // Authentication Routes
+    $route->add('login', '/login', 'App\Controller\AuthController::login');
+    $route->add('logout', '/logout', 'App\Controller\AuthController::logout');
+    $route->add('register', '/register', 'App\Controller\AuthController::register');
+    $route->add('login-process', '/login-process', 'App\Controller\AuthController::loginProcess');
+    $route->add('register-process', '/register-process', 'App\Controller\AuthController::registerProcess');
+});

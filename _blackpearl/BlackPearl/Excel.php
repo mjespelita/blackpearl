@@ -8,7 +8,7 @@ class Excel
 {
     public static function downloadExcel($excelArray, $source)
     {
-        require '_blackpearl/PhpXlsxGenerator.php';
+        require '_blackpearl/BlackPearl/PhpXlsxGenerator.php';
         // Initialize an empty array to store associative arrays
         $sourceArray = [];
         // Convert each user to an associative array
@@ -25,7 +25,7 @@ class Excel
 
     public static function downloadExcelAs($filename, $excelArray, $source)
     {
-        require '_blackpearl/PhpXlsxGenerator.php';
+        require '_blackpearl/BlackPearl/PhpXlsxGenerator.php';
         // Initialize an empty array to store associative arrays
         $sourceArray = [];
         // Convert each user to an associative array
@@ -41,7 +41,7 @@ class Excel
 
     public static function _downloadExcel($excelArray, $source)
     {
-        require '_blackpearl/PhpXlsxGenerator.php';
+        require '_blackpearl/BlackPearl/PhpXlsxGenerator.php';
 
         foreach ($source as $key => $value) {
             array_push($excelArray, $value);
@@ -53,7 +53,7 @@ class Excel
 
     public static function _downloadExcelAs($filename, $excelArray, $source)
     {
-        require '_blackpearl/PhpXlsxGenerator.php';
+        require '_blackpearl/BlackPearl/PhpXlsxGenerator.php';
         foreach ($source as $key => $value) {
             array_push($excelArray, $value);
         }

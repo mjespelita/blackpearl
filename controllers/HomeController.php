@@ -10,7 +10,7 @@ class HomeController
     public function index()
     {
         /**
-         * Uncomment this code to enable user authentication
+         * Uncomment Auth::check() to enable user authentication
          * and integrate it into your controllers for secure access
          * control and enhanced application security.
          */

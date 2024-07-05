@@ -6,7 +6,6 @@ use Dotenv\Dotenv;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 $capsule = new Capsule;
-// $env = json_decode(file_get_contents('env.json'), true);
 
 $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
