@@ -2,17 +2,18 @@
 
 require './config/app.php';
 
-require './_blackpearl/View.php';
-require './_blackpearl/File.php';
-require './_blackpearl/Mail.php';
-require './_blackpearl/BarCode.php';
-require './_blackpearl/QRCode.php';
-require './_blackpearl/JSON.php';
-require './_blackpearl/Excel.php';
-require './_blackpearl/Math.php';
-require './_blackpearl/WithUrl.php';
-require './_blackpearl/Redirect.php';
-require './_blackpearl/Auth.php';
+require './_blackpearl/BlackPearl/View.php';
+require './_blackpearl/BlackPearl/File.php';
+require './_blackpearl/BlackPearl/Mail.php';
+require './_blackpearl/BlackPearl/BarCode.php';
+require './_blackpearl/BlackPearl/QRCode.php';
+require './_blackpearl/BlackPearl/JSON.php';
+require './_blackpearl/BlackPearl/Excel.php';
+require './_blackpearl/BlackPearl/Math.php';
+require './_blackpearl/BlackPearl/WithUrl.php';
+require './_blackpearl/BlackPearl/Redirect.php';
+require './_blackpearl/BlackPearl/Auth.php';
+require './_blackpearl/BlackPearl/Routing.php';
 
 // Models
 require './models/User.php';
