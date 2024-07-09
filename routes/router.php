@@ -1,7 +1,5 @@
 <?php
 
-require '_blackpearl/autoload.php';
-
 use App\Routing\Routes;
 
 return Routes::load(function($route) {

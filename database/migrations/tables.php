@@ -1,9 +1,9 @@
 <?php
 
-require_once 'config/app.php';
+require 'config/database.php';
 
-use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 // Initialize Eloquent ORM
 $capsule = new Capsule;

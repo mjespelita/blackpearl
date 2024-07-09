@@ -46,7 +46,7 @@ class $name
 }");
 
             // update the autoload
-            file_put_contents('_blackpearl/autoload.php', "\nrequire './controllers/$controllerName';",FILE_APPEND | LOCK_EX);
+            file_put_contents('config/autoload.php', "\nrequire './controllers/$controllerName';",FILE_APPEND | LOCK_EX);
 
             echo "\n";
             echo "\033[0;32mController created successfully on 'controllers/$controllerName'\033[1;37m";

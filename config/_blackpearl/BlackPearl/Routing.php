@@ -1,6 +1,6 @@
 <?php
 
-// RouteFile.php
+// Routing.php
 
 namespace App\Routing;
 

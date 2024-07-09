@@ -56,7 +56,7 @@ file_put_contents('database/migrations/tables.php', "\n\n// $lowerModelName tabl
 });", FILE_APPEND | LOCK_EX);
 
             // update the autoload
-            file_put_contents('_blackpearl/autoload.php', "\nrequire './models/$modelName';",FILE_APPEND | LOCK_EX);
+            file_put_contents('config/autoload.php', "\nrequire './models/$modelName';",FILE_APPEND | LOCK_EX);
 
             echo "\n";
             echo "\033[0;32mModel created successfully on 'models/$modelName'\033[1;37m.";

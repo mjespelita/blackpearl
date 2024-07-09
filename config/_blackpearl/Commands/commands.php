@@ -2,13 +2,13 @@
 
 use Symfony\Component\Console\Application;
 
-require '_blackpearl/autoload.php';
+require 'config/autoload.php';
 
-require '_blackpearl/Commands/Controller.php';
-require '_blackpearl/Commands/View.php';
-require '_blackpearl/Commands/Model.php';
-require '_blackpearl/Commands/Database.php';
-require '_blackpearl/Commands/Console.php';
+require './config/_blackpearl/Commands/Controller.php';
+require './config/_blackpearl/Commands/View.php';
+require './config/_blackpearl/Commands/Model.php';
+require './config/_blackpearl/Commands/Database.php';
+require './config/_blackpearl/Commands/Console.php';
 
 
 $application = new Application();

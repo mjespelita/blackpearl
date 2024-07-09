@@ -3,6 +3,7 @@
 // index.php
 
 require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/config/autoload.php'; // Include BlackPearl autoloader
 $routes = require_once __DIR__ . '/routes/router.php'; // Include your routes configuration
 
 use Symfony\Component\Routing\Matcher\UrlMatcher;

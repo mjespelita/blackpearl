@@ -2,4 +2,4 @@
 
 <?php
 
-require './_blackpearl/Commands/commands.php';
+require './config/_blackpearl/Commands/commands.php';
