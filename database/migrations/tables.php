@@ -22,7 +22,7 @@ Capsule::schema()->create('users', function (Blueprint $table) {
 // password resets table
 Capsule::schema()->create('password_resets', function (Blueprint $table) {
     $table->increments('id');
-    $table->integer('name');
+    $table->integer('userid');
     $table->integer('token')->unique();
     $table->timestamps();
 });

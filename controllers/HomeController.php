@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use Framework\BlackPearl\Auth;
 use Framework\BlackPearl\View;
 
 class HomeController

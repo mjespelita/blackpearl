@@ -2,7 +2,7 @@
 
 namespace Framework\BlackPearl;
 
-use Framework\Models\User;
+use App\Models\User;
 use Framework\BlackPearl\Redirect;
 
 class Auth
@@ -14,7 +14,7 @@ class Auth
     public static function check()
     {
         session_start();
-        if ($_SESSION['user'] === "") {
+        if ($_SESSION['user'] === "" || !isset($_SESSION['user'])) {
             return Redirect::to('/login');
         }
     }

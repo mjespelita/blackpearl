@@ -23,7 +23,7 @@ class Routes
         return $instance->routes;
     }
 
-    public function add(string $name, string $path, string $controller): self
+    public function add(string $name, string $path, array $controller): self
     {
         $this->routes->add($name, new Route($path, [
             '_controller' => $controller,

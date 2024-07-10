@@ -1,15 +1,19 @@
 <?php
 
+use App\Controller\AuthController;
+use App\Controller\HomeController;
+use App\Controller\WelcomeController;
 use App\Routing\Routes;
 
-return Routes::load(function($route) {
-    $route->add('welcome', '/', 'App\Controller\WelcomeController::index');
-    $route->add('home', '/home', 'App\Controller\HomeController::index');
 
-    // Authentication Routes
-    $route->add('login', '/login', 'App\Controller\AuthController::login');
-    $route->add('logout', '/logout', 'App\Controller\AuthController::logout');
-    $route->add('register', '/register', 'App\Controller\AuthController::register');
-    $route->add('login-process', '/login-process', 'App\Controller\AuthController::loginProcess');
-    $route->add('register-process', '/register-process', 'App\Controller\AuthController::registerProcess');
+return Routes::load(function($route) {
+    $route->add('welcome', '/', [WelcomeController::class, 'index']);
+    $route->add('home', '/home', [HomeController::class, 'index']);
+
+    // Auth Routes
+    $route->add('login', '/login', [AuthController::class, 'login']);
+    $route->add('logout', '/logout', [AuthController::class, 'logout']);
+    $route->add('register', '/register', [AuthController::class, 'register']);
+    $route->add('login-process', '/login-process', [AuthController::class, 'loginProcess']);
+    $route->add('register-process', '/register-process', [AuthController::class, 'registerProcess']);
 });
